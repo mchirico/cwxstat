@@ -1,0 +1,40 @@
+# Add 'repo' label to any root file changes
+
+node:
+  - node/**/*
+
+repo:
+  - ./*
+
+node/datastore:
+  - node/src/datastore/**/*
+
+node/septa:
+  - node/src/septa/**/*
+
+github/workflow:
+  - .github/**/*
+
+node/package:
+  - node/package.json
+
+node/tsconfig:
+  - node/tsconfig.json
+
+storage:
+  - node/src/storage/*
+
+src:
+  - node/src/**/*
+
+angular/root:
+  - angular/*.json
+  - angular/*.md
+  - angular/*.sh
+  - angular/*.js
+
+angular/navpages:
+  - angular/src/app/navpages/**/*
+
+test:
+  - node/src/**/*.spec.js
