@@ -1,3 +1,5 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
 /*!
  * Bootswatch v4.4.1
  * Homepage: https://bootswatch.com
@@ -10613,3 +10615,6 @@ a.text-dark:hover, a.text-dark:focus {
 .list-group-item.disabled:hover {
   color: #5c507c;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
