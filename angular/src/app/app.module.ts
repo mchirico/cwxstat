@@ -13,8 +13,13 @@ import { AreaChartComponent } from './navpages/page0/area-chart/area-chart.compo
 import { StartChartComponent } from './navpages/page0/area-chart/start-chart/start-chart.component';
 import { DetailChartComponent } from './navpages/page0/area-chart/detail-chart/detail-chart.component';
 import { HomeComponent } from './navpages/home/home.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CalendarComponent } from './material-components/calendar/calendar.component';
+import {MaterialModule} from "./material-module";
+import {MatNativeDateModule} from "@angular/material/core";
+import {MAT_FORM_FIELD_DEFAULT_OPTIONS} from "@angular/material/form-field";
 
 @NgModule({
   declarations: [
@@ -28,15 +33,22 @@ import {HttpClientModule} from '@angular/common/http';
     AreaChartComponent,
     StartChartComponent,
     DetailChartComponent,
-    HomeComponent
+    HomeComponent,
+    CalendarComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    MaterialModule,
+    MatNativeDateModule,
+    ReactiveFormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [
+    { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
