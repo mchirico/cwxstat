@@ -17,9 +17,9 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CalendarComponent } from './material-components/calendar/calendar.component';
-import {MaterialModule} from "./material-module";
-import {MatNativeDateModule} from "@angular/material/core";
-import {MAT_FORM_FIELD_DEFAULT_OPTIONS} from "@angular/material/form-field";
+import {MaterialModule} from './material-module';
+import {MatNativeDateModule} from '@angular/material/core';
+import {MAT_FORM_FIELD_DEFAULT_OPTIONS} from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
