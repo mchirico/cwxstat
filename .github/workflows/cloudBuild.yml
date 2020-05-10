@@ -3,9 +3,7 @@ name: Cloud Build
 on:
   push:
     branches:
-      - master
       - n
-      - m
 
 
 jobs:
