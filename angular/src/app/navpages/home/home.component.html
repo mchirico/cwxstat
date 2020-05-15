@@ -1,1 +1,25 @@
 <p>home works!</p>
+
+<button (click)="test()">test</button>
+<p>
+<div id="tmsg">{{tmsg}}</div>
+<div id="data"></div>
+<p>
+
+
+<table>
+  <thead>
+  <th>id</th>
+  <th>name</th>
+  </thead>
+  <tbody>
+  <tr *ngFor="let i of data ">
+
+    <td>{{i.id}}</td>
+    <td>{{i.name}}</td>
+
+  </tr>
+  </tbody>
+</table>
+
+
