@@ -1,47 +1,41 @@
-import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import {async, TestBed} from '@angular/core/testing';
 import {HomeComponent} from './home.component';
 import {DataService} from './data.service';
 
+
+import {of} from 'rxjs';
 import {HttpClientTestingModule} from '@angular/common/http/testing';
 
-
 describe('HomeComponent', () => {
-  let component: HomeComponent;
-  let fixture: ComponentFixture<HomeComponent>;
-
-  let dataServiceResult;
-
-  const dataServiceStub = jasmine.createSpyObj('DataService',
-    ['getConfig']);
-
-
-  beforeEach(async(() => {
+  beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [HomeComponent],
-      providers: [{provide: DataService, useValue: dataServiceStub}],
+      providers: [{provide: DataService}],
       imports: [
         HttpClientTestingModule
-
       ],
     })
-      .compileComponents();
-  }));
+  });
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(HomeComponent);
-    component = fixture.componentInstance;
-    dataServiceResult = TestBed.inject(DataService);
+
+  it('should populate data', async(() => {
+    const fixture = TestBed.createComponent(HomeComponent);
+    const app = fixture.debugElement.componentInstance;
+    const service = fixture.debugElement.injector.get(DataService);
+
+    const spy = spyOn(service, 'getConfig').and.returnValue(of([{id: 2, name: 'bub'}]));
+
+    app.populateData();
     fixture.detectChanges();
-  });
+    fixture.whenStable().then(() => {
+      expect(app.data[0].id).toBe(2);
+      expect(app.data[0].name).toBe('bub');
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+    })
 
-  it('should get called', () => {
+    expect(app).toBeTruthy();
 
-    component.populateData()
-   // expect(dataServiceResult.getConfig.calls.count()).toBeGreaterThan(-1);
-  })
-
+  }));
 });
+
+
