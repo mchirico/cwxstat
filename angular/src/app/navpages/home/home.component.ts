@@ -14,6 +14,9 @@ export class HomeComponent implements OnInit {
 
   tmsg: string;
 
+  mouseX: string;
+  mouseY: string;
+
   constructor(private dataService: DataService) {
   }
 
@@ -37,4 +40,11 @@ export class HomeComponent implements OnInit {
     this.getURL()
   }
 
+  mouseMove($event) {
+    this.mouseX = $event.offsetX;
+    this.mouseY = $event.offsetY;
+    const svgElement = document.getElementById('svgCircle');
+    svgElement.setAttribute('cx', this.mouseX);
+    svgElement.setAttribute('cy', this.mouseY);
+  }
 }
