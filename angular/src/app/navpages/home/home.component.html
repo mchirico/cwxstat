@@ -1,5 +1,14 @@
-<p>home works!</p>
+<div>
+  <div>mouseX: {{mouseX}}</div>
+  <div>mouseY: {{mouseY}}</div>
+</div>
+<svg height="200" width="500"
+     (mousemove)="mouseMove($event)">
+  <circle id="svgCircle" cx="50" cy="50" r="20" stroke="black"
+          stroke-width="3" fill="red" />
 
+</svg>
+<p></p>
 <button (click)="test()">test</button>
 <p>
 <div id="tmsg">{{tmsg}}</div>
