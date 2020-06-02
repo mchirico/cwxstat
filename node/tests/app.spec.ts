@@ -15,7 +15,7 @@ describe('/api/v1/test', () => {
   });
 });
 describe('/trainview', () => {
-  it(' trainview', async () => {
+  xit(' trainview', async () => {
     const app = getApp();
     const res = await request(app).get('/trainview');
     const { lat } = res.body[0];
@@ -26,7 +26,7 @@ describe('/trainview', () => {
   });
 });
 describe('/trainviewp', () => {
-  it(' trainviewp', async () => {
+  xit(' trainviewp', async () => {
     const app = getApp();
     const res = await request(app).get('/trainviewp');
     const allowOrigin = res.header['access-control-allow-origin'];

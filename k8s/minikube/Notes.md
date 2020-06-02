@@ -1,7 +1,8 @@
 
 ```
 minikube tunnel
-k expose deployment gomini-pod --type=LoadBalancer --name=gomini-service
+k expose deployment node-server --type=LoadBalancer --name=node-service
+
 
 
 ```

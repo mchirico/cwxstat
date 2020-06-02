@@ -7,7 +7,6 @@ metadata:
   labels:
     run: node-server
   name: node-server
-  namespace: cwxstat
 spec:
   replicas: 2
   selector:
@@ -25,7 +24,7 @@ spec:
         run: node-server
     spec:
       containers:
-      - image: gcr.io/cwxstat-23/cwxstat:latest
+      - image: gcr.io/cwxstat-23/cwxstat:dev
         imagePullPolicy: IfNotPresent
         name: node-server
         ports:

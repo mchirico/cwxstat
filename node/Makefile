@@ -1,6 +1,6 @@
 PROJECT = cwxstat-23
 NAME = cwxstat
-TAG = latest
+TAG = dev
 
 
 docker-build:
@@ -8,6 +8,9 @@ docker-build:
 	(cd ../angular && ./updateDist.sh)
 	docker build --no-cache -t gcr.io/$(PROJECT)/$(NAME):$(TAG) -f Dockerfile .
 
+
+kind:
+	kind load docker-image gcr.io/$(PROJECT)/$(NAME):$(TAG)
 
 push:
 	docker push gcr.io/$(PROJECT)/$(NAME):$(TAG) 
