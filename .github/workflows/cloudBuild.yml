@@ -15,7 +15,7 @@ jobs:
       matrix:
         node-version: [12.x]
 
-    if: github.event.issue.comment.body == "/test" && github.event.issue.comment.author == "mchirico"
+    if: (github.event.issue.comment && startsWith(github.event.comment.body, '/test')) 
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
