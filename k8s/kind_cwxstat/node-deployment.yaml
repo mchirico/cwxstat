@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: nodee
-        image: quay.io/mchirico/cwxstat:dev
+        image: gcr.io/cwxstat-23/cwxstat:latest
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 3000
