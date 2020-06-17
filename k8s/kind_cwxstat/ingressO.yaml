@@ -1,0 +1,13 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: node-ingress
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /cwxstat
+        backend:
+          serviceName: node-service
+          servicePort: 3000
+ 
