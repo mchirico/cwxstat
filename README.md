@@ -3,6 +3,7 @@
 [![codecov](https://codecov.io/gh/mchirico/cwxstat/branch/master/graph/badge.svg)](https://codecov.io/gh/mchirico/cwxstat)
 # cwxstat
 
+Sample and more
 
 <a href='https://stackblitz.com/github/mchirico/cwxstat/tree/master/angular'>
 <img src='https://user-images.githubusercontent.com/755710/82267335-03da1c00-993a-11ea-81dd-f93720e0af94.png' width=500px />
