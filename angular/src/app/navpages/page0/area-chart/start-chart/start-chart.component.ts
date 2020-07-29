@@ -120,7 +120,7 @@ export class StartChartComponent implements OnInit, OnChanges {
     this.g.append('g')
       .attr('transform', 'translate(0,90)')
       .attr('stroke-width', 0.5)
-      .call(d3.axisBottom(this.x).tickSize(0).tickFormat(<any> ''));
+      .call(d3.axisBottom(this.x).tickSize(0).tickFormat('' as any));
 
     this.g.append('g')
       .attr('transform', 'translate(0,90)')
@@ -138,7 +138,7 @@ export class StartChartComponent implements OnInit, OnChanges {
     this.g.append('g')
       .attr('transform', 'translate(30,0)')
       .attr('stroke-width', 0.5)
-      .call(d3.axisLeft(this.y).tickSize(0).tickFormat(<any> ''));
+      .call(d3.axisLeft(this.y).tickSize(0).tickFormat('' as any));
     this.g.append('g')
       .attr('transform', 'translate(30,0)')
       .style('stroke-dasharray', ('1,1'))
