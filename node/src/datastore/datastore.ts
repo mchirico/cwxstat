@@ -30,21 +30,14 @@ export function queryAncestor(kind: string, ancestor: string[]) {
 }
 
 export function filter() {
-  const query = datastore
-    .createQuery('Task')
-    .filter('done', '=', true)
-    .filter('priority', '>=', 4)
-    .order('priority', {
-      descending: true,
-    });
+  const query = datastore.createQuery('Task').filter('done', '=', true).filter('priority', '>=', 4).order('priority', {
+    descending: true,
+  });
   return datastore.runQuery(query);
 }
 
 export function filter2() {
-  const query = datastore
-    .createQuery('Task')
-    .filter('tags', '=', 'fun')
-    .filter('tags', '=', 'programming');
+  const query = datastore.createQuery('Task').filter('tags', '=', 'fun').filter('tags', '=', 'programming');
 
   return datastore.runQuery(query);
 }

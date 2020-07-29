@@ -24,7 +24,7 @@ export const getApp = () => {
     res.json({ ok: true });
   });
 
-  app.get('/data', cors(corsOptions), function(req, res) {
+  app.get('/data', cors(corsOptions), function (req, res) {
     const heroes = [
       { id: 11, name: 'Dr Nice' },
       { id: 12, name: 'Narco' },
@@ -47,11 +47,11 @@ export const getApp = () => {
   });
 
   app.get('/trainview', (_, res) => {
-    getS$.subscribe(x => res.json(x));
+    getS$.subscribe((x) => res.json(x));
   });
 
   app.get('/trainviewp', (_, res) => {
-    getS$.subscribe(x => res.jsonp(x));
+    getS$.subscribe((x) => res.jsonp(x));
   });
   // Default ... keep last
   app.use('*', express.static(angularDirectoryPath));

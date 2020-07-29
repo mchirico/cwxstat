@@ -41,8 +41,5 @@ export function downloadFile(bucketName: string, srcFilename: string, destFilena
   };
 
   // Downloads the file
-  return storage
-    .bucket(bucketName)
-    .file(srcFilename)
-    .download(options);
+  return storage.bucket(bucketName).file(srcFilename).download(options);
 }

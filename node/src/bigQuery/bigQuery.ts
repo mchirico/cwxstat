@@ -20,10 +20,7 @@ export function createTable(datasetId: string, tableId: string, schema: string) 
 }
 
 export function insertRowsAsStream(datasetId: string, tableId: string, rows: RowMetadata) {
-  return bigquery
-    .dataset(datasetId)
-    .table(tableId)
-    .insert(rows);
+  return bigquery.dataset(datasetId).table(tableId).insert(rows);
 }
 
 // Ref: https://github.com/googleapis/nodejs-bigquery/blob/master/samples/query.js
