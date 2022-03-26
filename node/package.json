@@ -44,7 +44,7 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "firebase-admin": "^9.0.0",
-    "minimist": ">=1.2.5",
+    "minimist": ">=1.2.6",
     "request": "^2.88.2",
     "request-promise": "^4.2.6",
     "rxjs": "^6.6.0"
